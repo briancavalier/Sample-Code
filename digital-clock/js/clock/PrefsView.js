@@ -1,8 +1,8 @@
 dojo.provide('clock.PrefsView');
 
-dojo.require('cujo.mvc.BaseView');
+dojo.require('cujo.mvc.View');
 
-dojo.declare('clock.PrefsView', [cujo.mvc.BaseView],
+dojo.declare('clock.PrefsView', [cujo.mvc.View],
 {
 	templateString: dojo.cache("clock", "templates/PrefsView.html"),
 	

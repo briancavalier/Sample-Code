@@ -1,8 +1,8 @@
 dojo.provide('clock.AMPMView');
 
-dojo.require('cujo.mvc.BaseView');
+dojo.require('cujo.mvc.View');
 
-dojo.declare('clock.AMPMView', [cujo.mvc.BaseView],
+dojo.declare('clock.AMPMView', [cujo.mvc.View],
 {
 	templateString: dojo.cache('clock', 'templates/AMPMView.html'),
 	
