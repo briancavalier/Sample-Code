@@ -6,6 +6,12 @@ dojo.require('clock.DigitView');
 dojo.require('clock.SeparatorView');
 dojo.require('clock.AMPMView');
 
+dojo.declare('clock.ClockModel', [dojo.Stateful],
+{
+	
+});
+
+
 dojo.declare('clock.ClockView', [cujo.mvc.DataBoundView],
 {
     templateString: dojo.cache('clock', 'templates/ClockView.html'),
@@ -25,27 +31,25 @@ dojo.declare('clock.ClockView', [cujo.mvc.DataBoundView],
 	secondsView: null,
 	
 	ampmView: null,
-
+	
 	attributeMap: {
 		hours: {
 			type: "widget",
 			node: "hoursView",
-			attribute: "value"
+			attribute: "value",
+			data: "hours"
 		},
 		minutes: {
 			type: "widget",
 			node: "minutesView",
-			attribute: "value"
+			attribute: "value",
+			data: "minutes"
 		},
 		seconds: {
 			type: "widget",
 			node: "secondsView",
-			attribute: "value"
-		},
-		ampm: {
-			type: "widget",
-			node: "ampmView",
-			attribute: "value"
+			attribute: "value",
+			data: "seconds"
 		}
 	},
 	
@@ -56,6 +60,7 @@ dojo.declare('clock.ClockView', [cujo.mvc.DataBoundView],
 		this.subscribe("clock/prefs", function(key, value, all) { 
 			self.state({ state: value, value: true, set: all });
 		});
+		this.set("dataItem", new clock.ClockModel({hours: 0, minutes: 0, seconds: 0}));
 		this.inherited(arguments);
 	},
 	
@@ -85,7 +90,9 @@ dojo.declare('clock.ClockView', [cujo.mvc.DataBoundView],
 		}
 
 		this.separatorView.state("on", (s % 2 == 0));
-		this.set({ "hours": h, "minutes": m, "seconds": s });
+		this.dataItem.set("hours", h);
+		this.dataItem.set("minutes", m);
+		this.dataItem.set("seconds", s);
     },
 
     brighten: function() {
