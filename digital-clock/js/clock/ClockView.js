@@ -26,27 +26,6 @@ dojo.declare('clock.ClockView', [cujo.mvc.DataBoundView],
 	
 	ampmView: null,
 
-	// attributeMap: {
-	// 	hours: {
-	// 		type: "widget",
-	// 		node: "hoursView",
-	// 		attribute: "value",
-	// 		data: "hours"
-	// 	},
-	// 	minutes: {
-	// 		type: "widget",
-	// 		node: "minutesView",
-	// 		attribute: "value",
-	// 		data: "minutes"
-	// 	},
-	// 	seconds: {
-	// 		type: "widget",
-	// 		node: "secondsView",
-	// 		attribute: "value",
-	// 		data: "seconds"
-	// 	}
-	// },
-
 	attributeMap: {
 		hours: {
 			type: "widget",
@@ -77,7 +56,6 @@ dojo.declare('clock.ClockView', [cujo.mvc.DataBoundView],
 		this.subscribe("clock/prefs", function(key, value, all) { 
 			self.state({ state: value, value: true, set: all });
 		});
-		// this.set("dataItem", new clock.ClockModel({hours: 0, minutes:0, seconds: 0}));
 		this.inherited(arguments);
 	},
 	
