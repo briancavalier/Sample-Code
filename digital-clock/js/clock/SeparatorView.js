@@ -1,8 +1,8 @@
 dojo.provide('clock.SeparatorView');
 
-dojo.require('cujo.mvc.BaseView');
+dojo.require('cujo.mvc.View');
 
-dojo.declare('clock.SeparatorView', [cujo.mvc.BaseView],
+dojo.declare('clock.SeparatorView', [cujo.mvc.View],
 {
 	templateString: dojo.cache('clock', 'templates/SeparatorView.html'),
 

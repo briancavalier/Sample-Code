@@ -1,8 +1,8 @@
 dojo.provide('clock.DigitView');
 
-dojo.require('cujo.mvc.BaseView');
+dojo.require('cujo.mvc.View');
 
-dojo.declare('clock.DigitView', [cujo.mvc.BaseView],
+dojo.declare('clock.DigitView', [cujo.mvc.View],
 {
 	templateString: dojo.cache('clock', 'templates/DigitView.html'),
 	
