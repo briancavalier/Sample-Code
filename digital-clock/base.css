@@ -63,11 +63,14 @@ div {
 .on {
 	opacity: .9 !important;
 }
+.on .element {
+	opacity: .9;
+}
 .digit
  {
 	width: 124px;
 }
-.second {
+.seconds .digit {
 	margin-top: 111px;
 	height: 111px;
 	width: 62px;
@@ -115,26 +118,26 @@ div {
 	bottom: 10px;
 }
 /* Seconds */
-.second .bar {
+.seconds .bar {
 	border-radius: 3px;
 	-moz-border-radius: 3px;
 }
-.second .center {
+.seconds .center {
 	height: 10px;
 	width: 40px;
 	left: 11px;
 }
-.second .center.middle {
+.seconds .center.middle {
 	top: 50px;
 }
-.second .left, .second .right {
+.seconds .left, .seconds .right {
 	width: 10px;
 	height: 50px;
 }
-.second .left.top, .second .right.top {
+.seconds .left.top, .seconds .right.top {
 	top: 5px;
 }
-.second .left.bottom, .second .right.bottom {
+.seconds .left.bottom, .seconds .right.bottom {
 	bottom: 5px;
 }
 
@@ -143,7 +146,7 @@ div {
 	opacity: .9;
 }
 /* Always hide leading zeros in 12hr time */
-.hr12 .d0:first-child .bar {
+.hr12 .hours .d0:first-child .bar {
 	opacity: .1 !important;
 }
 .d1 .right.top, .d1 .right.bottom {
@@ -267,7 +270,7 @@ div {
 
 /* Color Themes - Green is default */
 /* Blue */
-.blue .clock {
+.blue.clock {
 	background-image: -webkit-gradient(linear, left top, left bottom, from(#000), color-stop(.5, rgba(80, 160, 200, .4)), to(#000));
 	background-image: -moz-linear-gradient(top, #000, rgba(0, 200, 255, .4) 50%, #000);
 }
@@ -276,12 +279,12 @@ div {
 	-webkit-box-shadow: 0 0 20px rgb(0, 200, 255);
 	-moz-box-shadow: 0 0 20px rgb(0, 200, 255);
 }
-.red .text, .red a, .red a:visited {
-	color: rgb(200, 20, 0);
-	text-shadow: 0 0 20px rgb(200, 20, 0);
+.blue .text, .blue a, .blue a:visited {
+	color: rgb(0, 200, 255);
+	text-shadow: 0 0 20px rgb(0, 200, 255);
 }
 /* Red */
-.red .clock {
+.red.clock {
 	background-image: -webkit-gradient(linear, left top, left bottom, from(#000), color-stop(.5, rgba(150, 0, 0, .3)), to(#000));
 	background-image: -moz-linear-gradient(top, #000, rgba(150, 0, 0, .3) 50%, #000);
 }
@@ -290,9 +293,13 @@ div {
 	-webkit-box-shadow: 0 0 20px rgb(200, 20, 0);
 	-moz-box-shadow: 0 0 20px rgb(200, 20, 0);
 }
-.blue .text, .blue a, .blue a:visited {
-	color: rgb(0, 200, 255);
-	text-shadow: 0 0 20px rgb(0, 200, 255);
+.red .text, .red a, .red a:visited {
+	color: rgb(200, 20, 0);
+	text-shadow: 0 0 20px rgb(200, 20, 0);
+}
+
+.green .theme.green, .red .theme.red, .blue .theme.blue {
+	opacity: .9;
 }
 
 footer {

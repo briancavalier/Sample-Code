@@ -9,89 +9,23 @@ License at the following url: http://www.opensource.org/licenses/mit-license.php
 <head>
 	<meta charset="UTF-8">
 	<title>CSS3 Digital Clock</title>
-	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
-	<script type="text/javascript" src="clock.js"></script>
+	
+	<script type="text/javascript">
+	    djConfig = { parseOnLoad: true, isDebug: true, debugAtAllCosts: true, baseUrl: 'js/', modulePaths: { 'cujo' : 'cujo', 'clock': 'clock' } };
+	</script>
+	
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/dojo/1.5/dojo/dojo.xd.js"></script>
+	<script type="text/javascript" src="js/cujo/cujo.js"></script>
 	<link rel="stylesheet" type="text/css" href="base.css" media="screen">
 </head>
 <body>
-	<div class="clock">
-		<div class="overlay"></div>
-		<div class="display">
-			<div class="slot digit">
-				<div class="element bar center top"></div>
-				<div class="element bar center middle"></div>
-				<div class="element bar center bottom"></div>
-				<div class="element bar left top"></div>
-				<div class="element bar left bottom"></div>
-				<div class="element bar right top"></div>
-				<div class="element bar right bottom"></div>
-			</div>
-			<div class="slot digit">
-				<div class="element bar center top"></div>
-				<div class="element bar center middle"></div>
-				<div class="element bar center bottom"></div>
-				<div class="element bar left top"></div>
-				<div class="element bar left bottom"></div>
-				<div class="element bar right top"></div>
-				<div class="element bar right bottom"></div>
-			</div>
-			<div class="slot sep colon">
-				<div class="element bar top"></div>
-				<div class="element bar bottom"></div>
-			</div>
-			<div class="slot digit">
-				<div class="element bar center top"></div>
-				<div class="element bar center middle"></div>
-				<div class="element bar center bottom"></div>
-				<div class="element bar left top"></div>
-				<div class="element bar left bottom"></div>
-				<div class="element bar right top"></div>
-				<div class="element bar right bottom"></div>
-			</div>
-			<div class="slot digit">
-				<div class="element bar center top"></div>
-				<div class="element bar center middle"></div>
-				<div class="element bar center bottom"></div>
-				<div class="element bar left top"></div>
-				<div class="element bar left bottom"></div>
-				<div class="element bar right top"></div>
-				<div class="element bar right bottom"></div>
-			</div>
-			<div class="slot second digit">
-				<div class="element bar center top"></div>
-				<div class="element bar center middle"></div>
-				<div class="element bar center bottom"></div>
-				<div class="element bar left top"></div>
-				<div class="element bar left bottom"></div>
-				<div class="element bar right top"></div>
-				<div class="element bar right bottom"></div>
-			</div>
-			<div class="slot second digit">
-				<div class="element bar center top"></div>
-				<div class="element bar center middle"></div>
-				<div class="element bar center bottom"></div>
-				<div class="element bar left top"></div>
-				<div class="element bar left bottom"></div>
-				<div class="element bar right top"></div>
-				<div class="element bar right bottom"></div>
-			</div>
-			<div class="slot text ampm">
-				<p class="element am">AM</p>
-				<p class="element pm">PM</p>
-			</div>
-		</div>
-	</div>
+	<div dojoType="clock.ClockView"></div>
 	<footer>
-		<div class="controls">
-			<a class="theme element dot green on" name="green" title="Green"></a>
-			<a class="theme element dot blue" name="blue" title="Blue"></a>
-			<a class="theme element dot red" name="red" title="Red"></a>
-		</div>
-		<div class="controls">
-			<a class="element text hours hr12" name="12" title="12-hour clock">12</a>
-			<a class="element text hours hr24" name="24" title="24-hour clock">24</a>
-		</div>
 		<p class="copyright text">Copyright &copy; 2010 <a href="http://briancavalier.com" title="Digital Clock">Brian Cavalier</a>
 		</footer>
+		<script type="text/javascript">
+			dojo.require('clock.ClockView');
+			dojo.require('clock.PrefsView');
+		</script>
 	</body>
 	</html>
