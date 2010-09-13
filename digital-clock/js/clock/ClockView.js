@@ -8,9 +8,8 @@ dojo.require('clock.AMPMView');
 
 dojo.declare('clock.ClockModel', [dojo.Stateful],
 {
-	
-});
 
+});
 
 dojo.declare('clock.ClockView', [cujo.mvc.DataBoundView],
 {
@@ -50,6 +49,11 @@ dojo.declare('clock.ClockView', [cujo.mvc.DataBoundView],
 			node: "secondsView",
 			attribute: "value",
 			data: "seconds"
+		},
+		ampm: {
+			type: "widget",
+			node: "ampmView",
+			attribute: "value"
 		}
 	},
 	
@@ -57,8 +61,11 @@ dojo.declare('clock.ClockView', [cujo.mvc.DataBoundView],
 		this.hours = this.minutes = this.seconds = 0;
 		this.ampm = null;
 		var self = this;
-		this.subscribe("clock/prefs", function(key, value, all) { 
-			self.state({ state: value, value: true, set: all });
+		this.subscribe("clock/prefs", function(key, value, all) {
+			if(all)
+				self.state({ state: value, value: true, set: all });
+			else
+				self.state(key, value);
 		});
 		this.set("dataItem", new clock.ClockModel({hours: 0, minutes: 0, seconds: 0}));
 		this.inherited(arguments);
@@ -77,28 +84,21 @@ dojo.declare('clock.ClockView', [cujo.mvc.DataBoundView],
                 ,s = now.getSeconds()
                 ,nowstr = now.toString()
                 ,tz = (nowstr.match(/\b([A-Z]{1,4}).$/) || [""]).pop()
-//                ,n = $('.digit')
-                ,hr12 = this.state("hr12");
                 ;
         dojo.addClass(this.domNode, "tz-" + tz.toLowerCase());
         // If 12hr clock, adjust h for display, and set AM/PM
-        if (hr12) {
+        if (this.state("hr12")) {
 			this.set("ampm", (h >= 12) ? "pm" : "am");
             h = (h == 0) ? 12 : (h > 12) ? h % 12 : h;
-        } else {
-			this.set("ampm", null);
-		}
+        }
 
 		this.separatorView.state("on", (s % 2 == 0));
-		this.dataItem.set("hours", h);
-		this.dataItem.set("minutes", m);
-		this.dataItem.set("seconds", s);
+		this.dataItem.set({ hours: h, minutes: m, seconds: s });
     },
 
     brighten: function() {
         this.state("dim", false);
         this._setupDim();
-        return true;
     },
 
     dim: function() {

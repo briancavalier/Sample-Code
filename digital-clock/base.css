@@ -56,6 +56,9 @@ div {
 	position: relative;
 	-webkit-transform: skewX(-5deg);
 	-moz-transform: skewX(-5deg);
+	transition:         all 250ms ease;
+	-webkit-transition: all 250ms ease;
+	-moz-transition:    all 250ms ease;
 }
 .element {
 	opacity: .1;
@@ -139,6 +142,24 @@ div {
 }
 .seconds .left.bottom, .seconds .right.bottom {
 	bottom: 5px;
+}
+.hide-seconds .seconds .bar {
+	opacity: .05 !important;
+/*	height: 0;*/
+}
+.slot {
+	transition:         all 250ms ease;
+	-webkit-transition: all 250ms ease;
+	-moz-transition:    all 250ms ease;
+}
+/*.hide-seconds .seconds .slot, .hide-seconds .seconds .element  {
+	width: 0;
+}*/
+.prefs .seconds {
+	opacity: .9 !important;
+}
+.hide-seconds .prefs .seconds {
+	opacity: .3 !important;
 }
 
 /* Digits */
@@ -246,6 +267,7 @@ div {
 .controls {
 	position: relative;
 	height: 100%;
+	margin-bottom: 10px;
 	text-align: center;
 	z-index: 101;
 }
