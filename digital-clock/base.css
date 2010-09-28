@@ -39,14 +39,16 @@ div {
 	padding: 20px;
 	overflow: hidden;
 	width: 800px;
+	z-index: 99;
+}
+.dim .dimmable {
 	-webkit-transition: opacity 1000ms ease;
 	-moz-transition: opacity 1000ms ease;
-	z-index: 99;
 }
 .dim .display {
 	opacity: .4;
 }
-.dim footer {
+.dim footer, .dim .prefs {
 	opacity: 0;
 }
 .slot {
@@ -56,6 +58,9 @@ div {
 	position: relative;
 	-webkit-transform: skewX(-5deg);
 	-moz-transform: skewX(-5deg);
+	transition:         all 250ms ease;
+	-webkit-transition: all 250ms ease;
+	-moz-transition:    all 250ms ease;
 }
 .element {
 	opacity: .1;
@@ -139,6 +144,19 @@ div {
 }
 .seconds .left.bottom, .seconds .right.bottom {
 	bottom: 5px;
+}
+.hide-seconds .seconds .bar {
+	opacity: .05 !important;
+}
+/*.hide-seconds .seconds .slot, .hide-seconds .seconds .bar  {
+	width: 0;
+}
+*/
+.prefs .seconds {
+	opacity: .9 !important;
+}
+.hide-seconds .prefs .seconds {
+	opacity: .3 !important;
 }
 
 /* Digits */
@@ -246,6 +264,7 @@ div {
 .controls {
 	position: relative;
 	height: 100%;
+	margin-bottom: 10px;
 	text-align: center;
 	z-index: 101;
 }
@@ -307,8 +326,6 @@ footer {
 	margin-top: 10px;
 	position: relative;
 	z-index: 102;
-	-webkit-transition: all 1000ms ease;
-	-moz-transition: all 1000ms ease;
 }
 
 .copyright {
