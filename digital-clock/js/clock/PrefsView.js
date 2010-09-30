@@ -34,7 +34,7 @@ dojo.declare('clock.StorageModel', [dojo.Stateful],
 
 dojo.declare('clock.PrefsView', [cujo.mvc.View],
 {
-	templateString: dojo.cache("clock", "templates/PrefsView.html"),
+	templateString: cujo.getHtml("clock.PrefsView"),
 	
 	themes: null,
 	

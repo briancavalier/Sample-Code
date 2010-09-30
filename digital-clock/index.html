@@ -8,15 +8,13 @@ License at the following url: http://www.opensource.org/licenses/mit-license.php
 <html lang="en-US">
 <head>
 	<meta charset="UTF-8">
-	<title>CSS3 Digital Clock</title>
+	<title>CSS3 Digital Clock: Cujo Remix</title>
 	
 	<script type="text/javascript">
-	    djConfig = { parseOnLoad: true, isDebug: true, debugAtAllCosts: true };
+	    djConfig = { parseOnLoad: true, isDebug: true };
 	</script>
-	
 	<script type="text/javascript" src="js/dojo/dojo.js"></script>
 	<script type="text/javascript" src="js/cujo/cujo.js"></script>
-	<link rel="stylesheet" type="text/css" href="base.css" media="screen">
 </head>
 <body>
 	<div dojoType="clock.ClockView"></div>
@@ -25,7 +23,6 @@ License at the following url: http://www.opensource.org/licenses/mit-license.php
 		</footer>
 		<script type="text/javascript">
 			dojo.require('clock.ClockView');
-			dojo.require('clock.PrefsView');
 		</script>
 	</body>
 	</html>

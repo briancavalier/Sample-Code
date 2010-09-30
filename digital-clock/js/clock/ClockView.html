@@ -21,7 +21,7 @@
 					<div class="element bar right bottom"></div>
 				</div>
 			</div>
-			<div class="slot sep colon" dojoAttachPoint="separatorView">
+			<div class="slot sep colon" dojoAttachPoint="separator">
 				<div class="element bar top"></div>
 				<div class="element bar bottom"></div>
 			</div>
@@ -65,7 +65,10 @@
 					<div class="element bar right bottom"></div>
 				</div>
 			</div>
-      <div dojoType="clock.AMPMView" dojoAttachPoint="ampmView"></div>
+			<div class="slot text ampm" dojoAttachPoint="ampm">
+				<p class="element am">AM</p>
+				<p class="element pm">PM</p>
+			</div>
     </div>
 		<div dojoType="clock.PrefsView"></div>
 </div>
