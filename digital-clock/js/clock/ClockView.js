@@ -49,27 +49,6 @@ dojo.require('clock.AMPMView');
 			.bind('seconds').data().derives('displaySeconds', '_displaySeconds')
 			.map(),
 		
-		// attributeMap: {
-		// 	hours: {
-		// 		derived: "displayHours",
-		// 		deriver: "_displayHours",
-		// 		data: "hours",
-		// 		type: "no-dom"
-		// 	},
-		// 	minutes: {
-		// 		derived: "displayMinutes",
-		// 		deriver: "_displayMinutes",
-		// 		data: "minutes",
-		// 		type: "no-dom"
-		// 	},
-		// 	seconds: {
-		// 		derived: "displaySeconds",
-		// 		deriver: "_displaySeconds",
-		// 		data: "seconds",
-		// 		type: "no-dom"
-		// 	}
-		// },
-
 		postMixInProperties: function() {
 			var self = this;
 			this.subscribe("clock/prefs", function(key, value, all) {
