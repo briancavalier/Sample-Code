@@ -52,14 +52,14 @@ dojo.declare('clock.PrefsView', [cujo.mvc.View],
 		this._updateTheme(this.prefsModel.get("theme"));
 		this._updateHours(this.prefsModel.get("hours"));
 		this._updateHideSeconds(this.prefsModel.get("hide-seconds") == "true");
-		dojo.query(".theme", this.themes).onclick(this, function(e) { this._updateTheme(e.target.name); });
-		dojo.query(".hour", this.hours).onclick(this, function(e) { this._updateHours(e.target.name); });
-		dojo.query(".seconds", this.hours).onclick(this, function(e) { this._updateHideSeconds(this.prefsModel.get("hide-seconds") == "false"); });
+		dojo.query(".theme", this.themes).onclick(this, function(e) { this._updateTheme(e.target.name); return false; });
+		dojo.query(".hour", this.hours).onclick(this, function(e) { this._updateHours(e.target.name); return false; });
+		dojo.query(".seconds", this.hours).onclick(this, function(e) { this._updateHideSeconds(this.prefsModel.get("hide-seconds") == "false"); return false; });
 	},
 	
 	_updatePref: function(prefKey, value, all) {
 		this.prefsModel.set(prefKey, value);
-		dojo.publish("clock/prefs", [prefKey, value, all]);
+		dojo.publish("clock/prefs/" + prefKey, [value, all]);
 	},
 	
 	_updateTheme: function(theme) {

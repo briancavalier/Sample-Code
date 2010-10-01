@@ -1,0 +1,35 @@
+/*
+	(c) copyright 2010, Brian Cavalier
+
+	LICENSE: see the LICENSE.txt file. If file is missing, this file is subject to the MIT
+	License at the following url: http://www.opensource.org/licenses/mit-license.php.
+*/
+body {
+	background: #000;
+	font-size: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+div {
+	margin: 0;
+	padding: 0;
+}
+
+footer {
+	display: block;
+	margin-top: 10px;
+	position: relative;
+	z-index: 102;
+}
+
+.text.copyright {
+	display: block;
+	font-size: 9px;
+	text-align: center;
+}
+
+a, a:visited {
+	color: #0f0;
+	text-shadow: 0 0 20px #0f0;
+}
