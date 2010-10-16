@@ -81,8 +81,8 @@ div {
 	position: absolute;
 	-webkit-box-shadow: 0 0 20px #0f0;
 	-moz-box-shadow: 0 0 20px #0f0;
-	-webkit-transition: all 400ms ease;
-	-moz-transition: all 400ms ease;
+	-webkit-transition: all 990ms ease;
+	-moz-transition: all 990ms ease;
 }
 .center {
 	left: 22px;
@@ -91,12 +91,15 @@ div {
 }
 .center.top {
 	top: 0;
+	margin-top: -250px;
 }
 .center.middle {
 	top: 100px;
+	margin-top: -250px;
 }
 .center.bottom {
 	bottom: 0px;
+	margin-bottom: -250px;
 }
 .left, .right {
 	width: 20px;
@@ -104,9 +107,11 @@ div {
 }
 .left {
 	left: 0;
+	margin-left: -1000px;
 }
 .right {
 	right: 0;
+	margin-right: -1000px;
 }
 .left.top, .right.top {
 	top: 10px;
@@ -141,6 +146,7 @@ div {
 /* Digits */
 .d0 .center.top, .d0 .center.bottom, .d0 .left.top, .d0 .left.bottom, .d0 .right.top, .d0 .right.bottom {
 	opacity: .9;
+	margin: 0;
 }
 /* Always hide leading zeros in 12hr time */
 .hr12 .d0:first-child .bar {
@@ -148,30 +154,39 @@ div {
 }
 .d1 .right.top, .d1 .right.bottom {
 	opacity: .9;
+	margin: 0;
 }
 .d2 .center, .d2 .right.top, .d2 .left.bottom {
 	opacity: .9;
+	margin: 0;
 }
 .d3 .center, .d3 .right.top, .d3 .right.bottom {
 	opacity: .9;
+	margin: 0;
 }
 .d4 .center.middle, .d4 .left.top, .d4 .right.top, .d4 .right.bottom {
 	opacity: .9;
+	margin: 0;
 }
 .d5 .center, .d5 .left.top, .d5 .right.bottom {
 	opacity: .9;
+	margin: 0;
 }
 .d6 .center, .d6 .left.top, .d6 .left.bottom, .d6 .right.bottom {
 	opacity: .9;
+	margin: 0;
 }
 .d7 .center.top, .d7 .right.top, .d7 .right.bottom {
 	opacity: .9;
+	margin: 0;
 }
 .d8 .bar {
 	opacity: .9;
+	margin: 0;
 }
 .d9 .center, .d9 .left.top, .d9 .right.top, .d9 .right.bottom {
 	opacity: .9;
+	margin: 0;
 }
 		
 /* Colon separator */
@@ -186,9 +201,15 @@ div {
 	height: 20px;
 }
 .colon .top {
-	top: 64px;
+	top: 100px;
 }
 .colon .bottom {
+	bottom: 100px;
+}
+.colon.on .top {
+	top: 64px;
+}
+.colon.on .bottom {
 	bottom: 64px;
 }
 
