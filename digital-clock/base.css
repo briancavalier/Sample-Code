@@ -394,3 +394,174 @@ a, a:visited {
 .white .font-ref {
 	opacity: 1;
 }
+
+/*
+ * Analog!
+ */
+.analog .clock { background: none; }
+.analog .overlay { display: none; }
+.analog .display {
+	width: 600px;
+	height: 600px;
+	margin: 0 auto;
+	padding: 0;
+	transform:         skewX(0);
+	-webkit-transform: skewX(0);
+	-moz-transform:    skewX(0);
+	border-radius:         300px;
+	-moz-border-radius:    300px;
+	border: 3px solid rgb(255, 160, 0);
+	-webkit-box-shadow: 0 0 20px rgb(255, 100, 0);
+	-moz-box-shadow: 0 0 20px rgb(255, 100, 0);
+}
+.analog .display-area {
+/*	border: 1px solid white;*/
+	background: transparent;
+	position: absolute;
+/*	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+*/	margin: 0;
+	padding: 0;
+}
+.analog .ampm, .analog .sep .element, .analog .bar {
+	display: none;
+}
+.analog .second {
+	margin-top: 0;
+}
+.analog .sep {
+	opacity: 1 !important;
+	background: rgb(255, 160, 0);
+	height: 20px;
+	width: 20px;
+	margin-top: -10px;
+	margin-left: -10px;
+	left: 50%;
+	top: 50%;
+	border-radius:         25px;
+	-moz-border-radius:    25px;
+	-webkit-box-shadow: 0 0 20px rgb(255, 100, 0);
+	-moz-box-shadow: 0 0 20px rgb(255, 100, 0);
+}
+.analog .digit {
+	display: block;
+	background: rgb(255, 160, 0);
+	width: 4px;
+	height: 280px;
+	left: 298px;
+	bottom: 300px;
+	border-radius:         25px;
+	-moz-border-radius:    25px;
+	-webkit-box-shadow: 0 0 20px rgb(255, 100, 0);
+	-moz-box-shadow: 0 0 20px rgb(255, 100, 0);
+/*	transition:         -webkit-transform 999ms linear;
+	-webkit-transition: -webkit-transform 999ms linear;
+	-moz-transition:    -webkit-transform 999ms linear;
+*/	-webkit-transform-origin: 50% 100%;
+	-moz-transform-origin: 50% 100%;
+}
+.analog .digit.hour {
+	width: 8px;
+	left: 296px;
+	height: 300px;
+}
+.analog .digit.minute {
+	width: 6px;
+	left: 297px;
+	height: 290px;
+}
+.analog .digit:first-child, .analog .sep + .minute, .analog .minute + .second, .analog .controls .hours {
+	display: none;
+}
+.dot.analog {
+	background-color: rgb(255, 160, 0);
+	box-shadow:         0 0 20px rgb(255, 100, 0);
+	-webkit-box-shadow: 0 0 20px rgb(255, 100, 0);
+	-moz-box-shadow:    0 0 20px rgb(255, 100, 0);
+}
+.analog .text, .analog .text a, .analog .text a:visited {
+	color: rgb(255, 160, 0);
+	text-shadow: 0 0 10px rgb(255, 160, 0);
+}
+
+.analog .d0 + .d0 {-webkit-transform: rotate(0deg); -moz-transform: rotate(0deg);}
+.analog .d0 + .d1 {-webkit-transform: rotate(6deg); -moz-transform: rotate(6deg);}
+.analog .d0 + .d2 {-webkit-transform: rotate(12deg); -moz-transform: rotate(12deg);}
+.analog .d0 + .d3 {-webkit-transform: rotate(18deg); -moz-transform: rotate(18deg);}
+.analog .d0 + .d4 {-webkit-transform: rotate(24deg); -moz-transform: rotate(24deg);}
+.analog .d0 + .d5 {-webkit-transform: rotate(30deg); -moz-transform: rotate(30deg);}
+.analog .d0 + .d6 {-webkit-transform: rotate(36deg); -moz-transform: rotate(36deg);}
+.analog .d0 + .d7 {-webkit-transform: rotate(42deg); -moz-transform: rotate(42deg);}
+.analog .d0 + .d8 {-webkit-transform: rotate(48deg); -moz-transform: rotate(48deg);}
+.analog .d0 + .d9 {-webkit-transform: rotate(54deg); -moz-transform: rotate(54deg);}
+
+.analog .d1 + .d0 {-webkit-transform: rotate(60deg); -moz-transform: rotate(60deg);}
+.analog .d1 + .d1 {-webkit-transform: rotate(66deg); -moz-transform: rotate(66deg);}
+.analog .d1 + .d2 {-webkit-transform: rotate(72deg); -moz-transform: rotate(72deg);}
+.analog .d1 + .d3 {-webkit-transform: rotate(78deg); -moz-transform: rotate(78deg);}
+.analog .d1 + .d4 {-webkit-transform: rotate(84deg); -moz-transform: rotate(84deg);}
+.analog .d1 + .d5 {-webkit-transform: rotate(90deg); -moz-transform: rotate(90deg);}
+.analog .d1 + .d6 {-webkit-transform: rotate(96deg); -moz-transform: rotate(96deg);}
+.analog .d1 + .d7 {-webkit-transform: rotate(102deg); -moz-transform: rotate(102deg);}
+.analog .d1 + .d8 {-webkit-transform: rotate(108deg); -moz-transform: rotate(108deg);}
+.analog .d1 + .d9 {-webkit-transform: rotate(114deg); -moz-transform: rotate(114deg);}
+
+.analog .d2 + .d0 {-webkit-transform: rotate(120deg); -moz-transform: rotate(120deg);}
+.analog .d2 + .d1 {-webkit-transform: rotate(126deg); -moz-transform: rotate(126deg);}
+.analog .d2 + .d2 {-webkit-transform: rotate(132deg); -moz-transform: rotate(132deg);}
+.analog .d2 + .d3 {-webkit-transform: rotate(138deg); -moz-transform: rotate(138deg);}
+.analog .d2 + .d4 {-webkit-transform: rotate(144deg); -moz-transform: rotate(144deg);}
+.analog .d2 + .d5 {-webkit-transform: rotate(150deg); -moz-transform: rotate(150deg);}
+.analog .d2 + .d6 {-webkit-transform: rotate(156deg); -moz-transform: rotate(156deg);}
+.analog .d2 + .d7 {-webkit-transform: rotate(162deg); -moz-transform: rotate(162deg);}
+.analog .d2 + .d8 {-webkit-transform: rotate(168deg); -moz-transform: rotate(168deg);}
+.analog .d2 + .d9 {-webkit-transform: rotate(174deg); -moz-transform: rotate(174deg);}
+
+.analog .d3 + .d0 {-webkit-transform: rotate(180deg); -moz-transform: rotate(180deg);}
+.analog .d3 + .d1 {-webkit-transform: rotate(186deg); -moz-transform: rotate(186deg);}
+.analog .d3 + .d2 {-webkit-transform: rotate(192deg); -moz-transform: rotate(192deg);}
+.analog .d3 + .d3 {-webkit-transform: rotate(198deg); -moz-transform: rotate(198deg);}
+.analog .d3 + .d4 {-webkit-transform: rotate(204deg); -moz-transform: rotate(204deg);}
+.analog .d3 + .d5 {-webkit-transform: rotate(210deg); -moz-transform: rotate(210deg);}
+.analog .d3 + .d6 {-webkit-transform: rotate(216deg); -moz-transform: rotate(216deg);}
+.analog .d3 + .d7 {-webkit-transform: rotate(222deg); -moz-transform: rotate(222deg);}
+.analog .d3 + .d8 {-webkit-transform: rotate(228deg); -moz-transform: rotate(228deg);}
+.analog .d3 + .d9 {-webkit-transform: rotate(234deg); -moz-transform: rotate(234deg);}
+
+.analog .d4 + .d0 {-webkit-transform: rotate(240deg); -moz-transform: rotate(240deg);}
+.analog .d4 + .d1 {-webkit-transform: rotate(246deg); -moz-transform: rotate(246deg);}
+.analog .d4 + .d2 {-webkit-transform: rotate(252deg); -moz-transform: rotate(252deg);}
+.analog .d4 + .d3 {-webkit-transform: rotate(258deg); -moz-transform: rotate(258deg);}
+.analog .d4 + .d4 {-webkit-transform: rotate(264deg); -moz-transform: rotate(264deg);}
+.analog .d4 + .d5 {-webkit-transform: rotate(270deg); -moz-transform: rotate(270deg);}
+.analog .d4 + .d6 {-webkit-transform: rotate(276deg); -moz-transform: rotate(276deg);}
+.analog .d4 + .d7 {-webkit-transform: rotate(282deg); -moz-transform: rotate(282deg);}
+.analog .d4 + .d8 {-webkit-transform: rotate(288deg); -moz-transform: rotate(288deg);}
+.analog .d4 + .d9 {-webkit-transform: rotate(294deg); -moz-transform: rotate(294deg);}
+
+.analog .d5 + .d0 {-webkit-transform: rotate(300deg); -moz-transform: rotate(300deg);}
+.analog .d5 + .d1 {-webkit-transform: rotate(306deg); -moz-transform: rotate(306deg);}
+.analog .d5 + .d2 {-webkit-transform: rotate(312deg); -moz-transform: rotate(312deg);}
+.analog .d5 + .d3 {-webkit-transform: rotate(318deg); -moz-transform: rotate(318deg);}
+.analog .d5 + .d4 {-webkit-transform: rotate(324deg); -moz-transform: rotate(324deg);}
+.analog .d5 + .d5 {-webkit-transform: rotate(330deg); -moz-transform: rotate(330deg);}
+.analog .d5 + .d6 {-webkit-transform: rotate(336deg); -moz-transform: rotate(336deg);}
+.analog .d5 + .d7 {-webkit-transform: rotate(342deg); -moz-transform: rotate(342deg);}
+.analog .d5 + .d8 {-webkit-transform: rotate(348deg); -moz-transform: rotate(348deg);}
+.analog .d5 + .d9 {-webkit-transform: rotate(354deg); -moz-transform: rotate(354deg);}
+
+.analog .hour.d0 + .d1 {-webkit-transform: rotate(30deg); -moz-transform: rotate(30deg);}
+.analog .hour.d0 + .d2 {-webkit-transform: rotate(60deg); -moz-transform: rotate(60deg);}
+.analog .hour.d0 + .d3 {-webkit-transform: rotate(90deg); -moz-transform: rotate(90deg);}
+.analog .hour.d0 + .d4 {-webkit-transform: rotate(120deg); -moz-transform: rotate(120deg);}
+.analog .hour.d0 + .d5 {-webkit-transform: rotate(150deg); -moz-transform: rotate(150deg);}
+.analog .hour.d0 + .d6 {-webkit-transform: rotate(180deg); -moz-transform: rotate(180deg);}
+.analog .hour.d0 + .d7 {-webkit-transform: rotate(210deg); -moz-transform: rotate(210deg);}
+.analog .hour.d0 + .d8 {-webkit-transform: rotate(240deg); -moz-transform: rotate(240deg);}
+.analog .hour.d0 + .d9 {-webkit-transform: rotate(270deg); -moz-transform: rotate(270deg);}
+
+.analog .hour.d1 + .d0 {-webkit-transform: rotate(300deg); -moz-transform: rotate(300deg);}
+.analog .hour.d1 + .d1 {-webkit-transform: rotate(330deg); -moz-transform: rotate(330deg);}
+.analog .hour.d1 + .d2 {-webkit-transform: rotate(0deg); -moz-transform: rotate(0deg);}
