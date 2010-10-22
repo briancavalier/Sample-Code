@@ -314,7 +314,7 @@ a, a:visited {
 
 
 /* 
- * Orange
+ * White
  * Uses font-based digits
  */
 @font-face {
@@ -552,16 +552,16 @@ a, a:visited {
 .analog .d5 + .d8 {-webkit-transform: rotate(348deg); -moz-transform: rotate(348deg);}
 .analog .d5 + .d9 {-webkit-transform: rotate(354deg); -moz-transform: rotate(354deg);}
 
-.analog .hour.d0 + .d1 {-webkit-transform: rotate(30deg); -moz-transform: rotate(30deg);}
-.analog .hour.d0 + .d2 {-webkit-transform: rotate(60deg); -moz-transform: rotate(60deg);}
-.analog .hour.d0 + .d3 {-webkit-transform: rotate(90deg); -moz-transform: rotate(90deg);}
-.analog .hour.d0 + .d4 {-webkit-transform: rotate(120deg); -moz-transform: rotate(120deg);}
-.analog .hour.d0 + .d5 {-webkit-transform: rotate(150deg); -moz-transform: rotate(150deg);}
-.analog .hour.d0 + .d6 {-webkit-transform: rotate(180deg); -moz-transform: rotate(180deg);}
-.analog .hour.d0 + .d7 {-webkit-transform: rotate(210deg); -moz-transform: rotate(210deg);}
-.analog .hour.d0 + .d8 {-webkit-transform: rotate(240deg); -moz-transform: rotate(240deg);}
-.analog .hour.d0 + .d9 {-webkit-transform: rotate(270deg); -moz-transform: rotate(270deg);}
+.analog .hour.d0 + .d1, .analog .hour.d1 + .d3 {-webkit-transform: rotate(30deg);  -moz-transform: rotate(30deg);}
+.analog .hour.d0 + .d2, .analog .hour.d1 + .d4 {-webkit-transform: rotate(60deg);  -moz-transform: rotate(60deg);}
+.analog .hour.d0 + .d3, .analog .hour.d1 + .d5 {-webkit-transform: rotate(90deg);  -moz-transform: rotate(90deg);}
+.analog .hour.d0 + .d4, .analog .hour.d1 + .d6 {-webkit-transform: rotate(120deg); -moz-transform: rotate(120deg);}
+.analog .hour.d0 + .d5, .analog .hour.d1 + .d7 {-webkit-transform: rotate(150deg); -moz-transform: rotate(150deg);}
+.analog .hour.d0 + .d6, .analog .hour.d1 + .d8 {-webkit-transform: rotate(180deg); -moz-transform: rotate(180deg);}
+.analog .hour.d0 + .d7, .analog .hour.d1 + .d9 {-webkit-transform: rotate(210deg); -moz-transform: rotate(210deg);}
+.analog .hour.d0 + .d8, .analog .hour.d2 + .d0 {-webkit-transform: rotate(240deg); -moz-transform: rotate(240deg);}
+.analog .hour.d0 + .d9, .analog .hour.d2 + .d1 {-webkit-transform: rotate(270deg); -moz-transform: rotate(270deg);}
 
-.analog .hour.d1 + .d0 {-webkit-transform: rotate(300deg); -moz-transform: rotate(300deg);}
-.analog .hour.d1 + .d1 {-webkit-transform: rotate(330deg); -moz-transform: rotate(330deg);}
+.analog .hour.d1 + .d0, .analog .hour.d2 + .d2 {-webkit-transform: rotate(300deg); -moz-transform: rotate(300deg);}
+.analog .hour.d1 + .d1, .analog .hour.d2 + .d3 {-webkit-transform: rotate(330deg); -moz-transform: rotate(330deg);}
 .analog .hour.d1 + .d2 {-webkit-transform: rotate(0deg); -moz-transform: rotate(0deg);}
